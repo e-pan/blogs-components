@@ -65,7 +65,7 @@ export default defineComponent({
           login(params, props.apiHost).then((res) => {
             debugger
             if (res) {
-              local.set('token', JSON.stringify(res))
+              local.set('token', JSON.stringify(res.token))
               window.location.href = props.redirect || '/'
             } else {
               params.password = ''
