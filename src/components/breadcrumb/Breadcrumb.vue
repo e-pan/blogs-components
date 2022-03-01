@@ -1,6 +1,6 @@
 <template>
-  <div class="tic-breadcrumb">
-    <span class="tic-breadcrumb-postion">当前位置：</span>
+  <div class="components-breadcrumb">
+    <span class="components-breadcrumb-postion">当前位置：</span>
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: breadcrumb.path ? breadcrumb.path : '' }"
                           v-for='(breadcrumb, index) of breadcrumb.items'
@@ -13,7 +13,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TicBreadcrumb',
+  name: 'ComponentBreadcrumb',
   props: {
     breadcrumb: {
       default: () => {},
@@ -26,14 +26,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.tic-breadcrumb {
+.components-breadcrumb {
   display: flex;
   align-items: center;
   height: 30px;
   width: 100%;
   margin-bottom: 15px;
 
-  .tic-breadcrumb-postion {
+  .components-breadcrumb-postion {
     font-size: 14px;
   }
 }

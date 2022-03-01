@@ -1,7 +1,7 @@
 <template>
   <el-tooltip :content="content">
     <div :style="{width: width + 'px'}"
-         class="tic-tooltip">{{ content }}</div>
+         class="components-tooltip">{{ content }}</div>
   </el-tooltip>
 </template>
 
@@ -9,7 +9,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TicTooltip',
+  name: 'ComponentTooltip',
   props: {
     content: {
       default: '',
@@ -25,7 +25,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.tic-tooltip {
+.components-tooltip {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

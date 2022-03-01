@@ -4,7 +4,7 @@
     <Header :systems='systems'
             :userInfo='userInfo' />
     <el-main>
-      <div class="tic-main">
+      <div class="components-main">
         <router-view />
       </div>
     </el-main>
@@ -19,7 +19,7 @@ import Footer from '../footer/Footer.vue'
 // import { local } from '@/utils/util'
 
 export default defineComponent({
-  name: 'TicLayout',
+  name: 'ComponentLayout',
   components: {
     Header,
     Footer,

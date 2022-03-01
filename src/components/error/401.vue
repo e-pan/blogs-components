@@ -1,9 +1,9 @@
 <template>
-  <el-header class="tic-header" style="height: 56px">
+  <el-header class="components-header" style="height: 56px">
     <a href="/">
       FUZHONGKUO
     </a>
-    <div class="tic-header-menus">
+    <div class="components-header-menus">
       <!-- 菜单 -->
       <el-menu
         :default-active="activeIndex"
@@ -33,7 +33,7 @@
       </el-menu>
       <!-- 系统集合 -->
       <el-dropdown :hide-on-click="false">
-        <span class="tic-header-dropdown">
+        <span class="components-header-dropdown">
           <el-avatar icon="el-icon-user-solid"></el-avatar>
           <span>{{ userInfo.userName }}</span>
           <i class="el-icon-arrow-down el-icon--right"></i>
@@ -55,7 +55,7 @@
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: "TicHeader",
+  name: "Component401",
   props: {
     menus: {
       default: (): void => {},
@@ -93,7 +93,7 @@ export default defineComponent({
 
 
 <style lang="scss" scoped>
-.tic-header {
+.components-header {
   height: 56px;
   display: flex;
   padding: 10px 20px;
@@ -103,12 +103,12 @@ export default defineComponent({
     width: 77px;
     height: 36px;
   }
-  .tic-header-menus {
+  .components-header-menus {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .tic-header-dropdown {
+  .components-header-dropdown {
     cursor: pointer;
     display: flex;
     align-items: center;

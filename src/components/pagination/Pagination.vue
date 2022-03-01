@@ -20,7 +20,7 @@ export default defineComponent({
       type: Object,
     },
   },
-  name: 'TicPagination',
+  name: 'ComponentPagination',
   setup(props, context) {
     // 父组件接收到的分页参数赋值到变量
     const pageParams = reactive(props.pageParams)

@@ -1,5 +1,5 @@
 <template>
-  <el-footer class="tic-footer"
+  <el-footer class="components-footer"
              style="height:40px;">
     <span>&copy;{{systemInfo.copyright}}</span>
     <span>版本: {{systemInfo.version}}</span>
@@ -11,7 +11,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TicFooter',
+  name: 'ComponentFooter',
   props: {
     systemInfo: {
       default: (): void => {},
@@ -25,7 +25,7 @@ export default defineComponent({
 
 
 <style lang="scss" scoped>
-.tic-footer {
+.components-footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;

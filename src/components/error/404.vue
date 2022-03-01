@@ -38,7 +38,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Tic404',
+  name: 'Component404',
   setup() {
     const err404 = require('@/assets/images/404.png')
     const errCloud = require('@/assets/images/404_cloud.png')

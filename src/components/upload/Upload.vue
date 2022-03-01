@@ -26,7 +26,7 @@
 import { reactive, defineComponent, toRefs, onMounted, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 export default defineComponent({
-  name: 'TicUpload',
+  name: 'ComponentUpload',
   props: {
     // 上传地址（必填）
     action: {

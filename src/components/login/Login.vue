@@ -1,6 +1,6 @@
 <template>
-  <div class="tic-login">
-    <p class="tic-login-title">欢迎登录管理系统</p>
+  <div class="components-login">
+    <p class="components-login-title">欢迎登录管理系统</p>
     <el-form ref="ruleForm"
              :rules="rules"
              :model="params"
@@ -34,7 +34,7 @@ import { local } from '@/utils/util'
 import { ILogin } from '@/type/Loing'
 
 export default defineComponent({
-  name: 'TicLogin',
+  name: 'ComponentLogin',
   props: {
     redirect: {
       type: String,
@@ -87,7 +87,7 @@ export default defineComponent({
 
 
 <style lang="scss" scoped>
-.tic-login {
+.components-login {
   width: 460px;
   height: 300px;
   position: absolute;
@@ -107,7 +107,7 @@ export default defineComponent({
     background: #fcfcfc;
     margin-top: 20px;
   }
-  .tic-login-title {
+  .components-login-title {
     font-size: 16px;
     padding-left: 20px;
     text-align: center;

@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <h2>Header组件：</h2>
-    <TicHeader :menus="menus"
+    <ComponentHeader :menus="menus"
                :systems="systems"
                :userInfo="userInfo" />
   </div>
@@ -15,7 +15,7 @@
       <h4>size：允许上传图片的size，默认5mb(选填)</h4>
       <h4>accept：接受上传的文件类型, 默认image/*图片类型(选填)</h4>
     </div>
-    <TicUpload :action="upload.action"
+    <ComponentUpload :action="upload.action"
                :show-file-list="upload.showFileList"
                :multiple="upload.multiple"
                :limit="upload.limit"
@@ -26,15 +26,15 @@
   <!-- 
   <div class="box">
     <h2>面包屑组件：</h2>
-    <TicBreadcrumb :breadcrumb="breadcrumb" />
+    <ComponentBreadcrumb :breadcrumb="breadcrumb" />
   </div>
   <div class="box">
     <h2>分页组件：</h2>
-    <TicPagination :pageParams="pageParams" @pageEmit="pageEmitFun" />
+    <ComponentPagination :pageParams="pageParams" @pageEmit="pageEmitFun" />
   </div>
   <div class="box">
     <h2>基础框架组件：</h2>
-    <TicLayout
+    <ComponentLayout
       :systems="systems"
       :userInfo="userInfo"
       :systemInfo="systemInfo"
@@ -42,20 +42,20 @@
   </div>
   <div class="box">
     <h2>错误页面组件：</h2>
-    <Tic404 />
+    <Component404 />
   </div>
   <div class="box">
     <h2>超出提示组件：</h2>
-    <TicTooltip :content="tooltip.content" :width="tooltip.width" />
+    <ComponentTooltip :content="tooltip.content" :width="tooltip.width" />
   </div>
   
   <div class="box">
     <h2>Footer组件：</h2>
-    <TicFooter :systemInfo="systemInfo" />
+    <ComponentFooter :systemInfo="systemInfo" />
   </div>
   <div class="box">
     <h2>Company组件：</h2>
-    <TicCompany :api-host="apiHost" :cust-id="custId" />
+    <ComponentCompany :api-host="apiHost" :cust-id="custId" />
     <el-buttonm>添加</el-buttonm>
     <el-buttonm>编辑</el-buttonm>
   </div>
@@ -69,7 +69,7 @@
       <h4>方法：clearCheck 清除选中状态</h4>
     </div>
     <el-button @click="handleClearCheck">清除选中</el-button>
-    <TicTree
+    <ComponentTree
       ref="refTree"
       :tree-datas="tree.treeDatas"
       :node-key="tree.nodeKey"
@@ -87,7 +87,7 @@
         categoryProps：非必填（multiple是否可以多选、checkStrictly选择到最后一级）
       </h4>
     </div>
-    <TicCascader
+    <ComponentCascader
       :api-host="apiHost"
       :category-ids="cascader.categoryIds"
       :category-props="cascader.categoryProps"
@@ -105,7 +105,7 @@
         redirect：选填 (成功后的重定向地址)
       </h4>
     </div>
-    <TicLogin :api-host='apiHost'
+    <ComponentLogin :api-host='apiHost'
               :redirect='redirect' />
   </div> -->
 </template>
@@ -114,32 +114,32 @@
 import { defineComponent, onMounted, reactive, ref, provide } from 'vue'
 //@ts-ignore
 import config from './../package.json' // 当前发布版本
-import TicBreadcrumb from '@/components/breadcrumb/Breadcrumb.vue'
-import TicFooter from '@/components/footer/Footer.vue'
-import TicHeader from '@/components/header/Header.vue'
-import TicPagination from '@/components/pagination/Pagination.vue'
-import TicLayout from '@/components/layout/Layout.vue'
-import TicLogin from '@/components/login/Login.vue'
-import Tic404 from '@/components/error/404.vue'
-import TicTooltip from '@/components/tooltip/Tooltip.vue'
-import TicUpload from '@/components/upload/Upload.vue'
-import TicTree from '@/components/tree/Tree.vue'
-import TicCascader from '@/components/cascader/Cascader.vue'
+import ComponentBreadcrumb from '@/components/breadcrumb/Breadcrumb.vue'
+import ComponentFooter from '@/components/footer/Footer.vue'
+import ComponentHeader from '@/components/header/Header.vue'
+import ComponentPagination from '@/components/pagination/Pagination.vue'
+import ComponentLayout from '@/components/layout/Layout.vue'
+import ComponentLogin from '@/components/login/Login.vue'
+import Component404 from '@/components/error/404.vue'
+import ComponentTooltip from '@/components/tooltip/Tooltip.vue'
+import ComponentUpload from '@/components/upload/Upload.vue'
+import ComponentTree from '@/components/tree/Tree.vue'
+import ComponentCascader from '@/components/cascader/Cascader.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    TicLayout,
-    TicPagination,
-    TicHeader,
-    TicFooter,
-    TicBreadcrumb,
-    TicLogin,
-    Tic404,
-    TicTooltip,
-    TicUpload,
-    TicTree,
-    TicCascader,
+    ComponentLayout,
+    ComponentPagination,
+    ComponentHeader,
+    ComponentFooter,
+    ComponentBreadcrumb,
+    ComponentLogin,
+    Component404,
+    ComponentTooltip,
+    ComponentUpload,
+    ComponentTree,
+    ComponentCascader,
   },
   // provide() {
   //   return {
@@ -157,8 +157,8 @@ export default defineComponent({
   //             path: '/client/javaScript',
   //           },
   //           {
-  //             name: 'Statics Error',
-  //             path: '/client/static',
+  //             name: 'StaComponents Error',
+  //             path: '/client/staComponent',
   //           },
   //           {
   //             name: 'API Error',
@@ -293,8 +293,8 @@ export default defineComponent({
                 path: '/client/javaScript',
               },
               {
-                name: 'Statics Error',
-                path: '/client/static',
+                name: 'StaComponents Error',
+                path: '/client/staComponent',
               },
               {
                 name: 'API Error',

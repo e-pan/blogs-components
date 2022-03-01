@@ -12,7 +12,7 @@
 import { defineComponent, reactive, ref } from 'vue'
 
 export default defineComponent({
-  name: 'TicTree',
+  name: 'ComponentTree',
   props: {
     // 渲染数据源
     treeDatas: {

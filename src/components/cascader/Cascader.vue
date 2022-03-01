@@ -16,7 +16,7 @@ import { createTreeData } from '@/utils/util'
 // import { basicCategory } from '@/request/apis'
 
 export default defineComponent({
-  name: 'TicCascader',
+  name: 'ComponentCascader',
   emits: ['emit:category'],
   props: {
     apiHost: {
