@@ -21,7 +21,7 @@
                       :index="String(index)">
             <template #title>{{menu.name}}</template>
             <el-menu-item v-for="(children, subIndex) of menu.children"
-                          :index="children.funcUrl"
+                          :index="children.path"
                           :key='subIndex'>{{children.name}}</el-menu-item>
           </el-submenu>
         </template>

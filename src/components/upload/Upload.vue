@@ -80,7 +80,7 @@ export default defineComponent({
         )
       },
       handleSuccess: (response, file, fileList) => {
-        if (response.resultCode === '0') {
+        if (response.code ===  200) {
           dataMap.defaultFileList = fileList
           ctx.emit('uploadEmit', fileList)
         }
